@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classification and enhancement</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      #background-video {
+        width: 100%;
+        height: auto;
+      }
+
+      .header-container {
+        background-color: yellow;
+        padding: 10px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        color: #333;
+      }
+
+      form {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      input[type="file"] {
+        margin: 10px;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <video id="background-video" autoplay loop muted>
+        <source src="/static/bg-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="header-container">
+      <h1>SAR Image Classification and Enhancement</h1>
+    </div>
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+      <input type="file" name="image" required>
+      <br>
+      <input type="submit" value="Classify">
+    </form>
+  </body>
+</html>

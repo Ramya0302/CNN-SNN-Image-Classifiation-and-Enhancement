@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .error-container {
+            background-color: #ccc;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .upload-another {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .upload-another a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+        }
+
+        .upload-another a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Error</h1>
+        <div class="error-container">
+            <p>{{ message }}</p>
+            <img src="{{ image_path }}" alt="File not found">
+        </div>
+        <div class="upload-another">
+            <p><a href="/">Upload another image</a></p>
+        </div>
+    </div>
+</body>
+</html>
